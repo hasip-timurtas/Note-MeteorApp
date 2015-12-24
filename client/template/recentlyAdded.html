@@ -1,0 +1,7 @@
+<template name="recentlyAdded">
+	{{#each recents}}
+	<a href="#" class="list-group-item recent-note">{{title}}</a>
+	{{else}}
+		<h4>You don't have any note yet.</h4>
+	{{/each}}
+</template>

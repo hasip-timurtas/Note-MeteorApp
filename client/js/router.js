@@ -1,10 +1,10 @@
 Router.route("/",{
 	name : "index",
 	layoutTemplate : "mainLayout",
-/*	waitOn: function() {
-		return Meteor.subscribe("posts");
+	waitOn: function() {
+		return Meteor.subscribe("notes");
 	},
-*/	action : function() {
+	action : function() {
 		this.render("index");
 	}
 });
