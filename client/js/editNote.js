@@ -22,4 +22,27 @@ Template.editNote.events({
 		var noteContent = $(".note-content").val();
 		Meteor.call("updateNote",noteId,noteTitle,noteContent);
 	},
+
+	"click .share-note": function() {
+		
+
+		BootstrapModalPrompt.prompt({
+		    title: "Write an e-mail adress for sharing the note",
+
+		    content: "<input class='form-control note-title share-mail' type='text' placeholder='email'> "
+		}, function(result) {
+		  if (result) {
+
+		  	var noteId = Session.get('selected');
+			var noteTitle = $(".note-title").val();
+			var noteContent = $(".note-content").val();
+		  	var email = $(".share-mail").val();
+			Meteor.call("shareNote",noteTitle,noteContent,email);
+		  }
+		 
+		});
+
+
+
+	}
 });

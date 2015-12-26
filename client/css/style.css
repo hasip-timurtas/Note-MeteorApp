@@ -8,6 +8,14 @@
     margin-top: -5px;
 }
 
+.show-note .alert-info{
+    margin-top: 10px;
+}
+
+.count-list{
+}
+
+
 @media only screen and (max-width: 480px) {
     body {
         background-color: lightblue;
