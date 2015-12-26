@@ -1,6 +1,8 @@
 Template.recentlyAdded.helpers({
 	recents: function() {
+		//alert("recents");
 		return Notes.find({});
+
 	},
 	selectedClass : function() {
       if (Session.get('selected') === this._id) { 
@@ -12,13 +14,11 @@ Template.recentlyAdded.helpers({
 
 Template.recentlyAdded.events({
 	"click .recent-note": function() {
+		Session.set('selected',this._id);
 		var noteId= this._id;
 		var selectedNote = Notes.findOne({_id: noteId});
 		// for changing backgound
-		Session.set('selected',this._id);
-		//Session.set('selected',this._id);
+
 		Session.set('selectedNoteId', selectedNote._id);
-		Session.set('selectedTitle', selectedNote.title);
-		Session.set('selectedContent', selectedNote.content);
 	}
 });
