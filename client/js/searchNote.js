@@ -12,15 +12,18 @@ Template.searchNote.helpers({
 	},
 	selectedClass : function() {
       if (Session.get('selected') === this._id) { 
-        return "active2"; 
+        return "active"; 
         };
     }
 });
 
 Template.searchNote.events({
 	"keyup .searchNote":function(event) {
-		Session.set('selected',this._id);
 		var text = event.currentTarget.value;
 		Session.set('searchText',text);
+	},
+	"click .selected-search-note": function() {
+		Session.set('selected',this._id);
+		
 	}
 });

@@ -7,17 +7,22 @@
 
 			<div class="list-group ">
 		   		<a href="#" class="list-group-item disabled">
-				<strong>Recently Added</strong> 
+				<strong>Lastest 4 Notes</strong> 
 			 	</a>
 			  	{{> recentlyAdded}}
 			</div>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-9">
-			<input class="form-control" type="text" value="{{selectedNote.title}}"> 
-			<br>
-			<textarea class="form-control" rows="15">{{selectedNote.content}}</textarea>
+		<div class="col-md-9 show-note">
+			{{#if selectedNote}}
+				<div class="alert alert-info" role="alert"> 
+					Entry Date : <strong>{{formatDate selectedNote.entry_date}}</strong>
+					{{> editNote}}
+				</div>
+			{{/if}}
+			<input class="form-control note-title" type="text" placeholder="title" value="{{selectedNote.title}}"> 
+			<textarea class="form-control note-content" placeholder="content" rows="15">{{selectedNote.content}}</textarea>
 		</div>
 	</div>
 	

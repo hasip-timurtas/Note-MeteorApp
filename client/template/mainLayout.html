@@ -1,6 +1,10 @@
 <template name="mainLayout">
 	{{> navbar}}
 	<div class="container">
+	{{#if currentUser}}
 		{{> yield}}
+	 {{else}}
+	 	<label>For using the application please log in.</label>
+	 {{/if}}
 	</div>
 </template> 

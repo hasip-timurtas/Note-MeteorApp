@@ -24,3 +24,5 @@ fortawesome:fontawesome
 aldeed:simple-schema
 aldeed:collection2
 underscore
+momentjs:moment
+theduke:bootstrap-modal-prompt

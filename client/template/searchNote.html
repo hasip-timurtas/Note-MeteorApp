@@ -1,13 +1,9 @@
 <template name="searchNote">
 	<input class="form-control searchNote" type="text" placeholder="Search">
-			<div class="list-group" style="margin-top: 6px;">
-	{{#each searchResults}}
-	<a href="#" class="list-group-item recent-note {{selectedClass}}">{{title}}
-	</a>
-	{{else}}
-		<h4>You don't have any note yet.</h4>
-	{{/each}}
-
-
+	<div class="list-group" style="margin-top: 6px;">
+		{{#each searchResults}}
+		<a href="#" class="list-group-item selected-search-note {{selectedClass}}">{{title}}
+		</a>
+		{{/each}}
 	</div>
 </template>

@@ -1,0 +1,9 @@
+.note-content{
+	margin-top:10px;
+}
+
+.show-note button{
+	float: right;
+    margin-left: 10px;
+    margin-top: -5px;
+}
