@@ -7,3 +7,14 @@
     margin-left: 10px;
     margin-top: -5px;
 }
+
+@media only screen and (max-width: 480px) {
+    body {
+        background-color: lightblue;
+    }
+
+    .show-note button{
+    	float: none;
+    	margin-top: 10px;
+    }
+}

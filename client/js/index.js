@@ -9,3 +9,7 @@ Template.index.helpers({
 Template.registerHelper('formatDate', function(date) {
   return moment(date).format('DD.MM.YYYY hh:mm:ss a');
 });
+
+Template.registerHelper("SetTitle", function(title) {
+        document.title = title;
+});
