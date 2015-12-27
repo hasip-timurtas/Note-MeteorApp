@@ -29,7 +29,7 @@ Template.editNote.events({
 		BootstrapModalPrompt.prompt({
 		    title: "Write an e-mail adress for sharing the note",
 
-		    content: "<input class='form-control note-title share-mail' type='text' placeholder='email'> "
+		    content: "<input class='form-control note-title share-mail' type='email' placeholder='email'> "
 		}, function(result) {
 		  if (result) {
 

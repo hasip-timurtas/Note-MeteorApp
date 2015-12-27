@@ -12,14 +12,14 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-            <li><a href="/create-note">Create Note</a></li>
             {{#if currentUser}}
-              <li><a href="/shares">Shares</a>
-              <!-- <span class="count-list">3</span> !--></li>
+              <li><a href="/create-note">Create Note</a></li>
             {{/if}}
-            <li><a href="#"> {{> loginButtons}}</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div><!--/.container-fluid -->
-    </nav>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+             <li><a href="#"> {{> loginButtons}}</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+  </nav>
 </template>

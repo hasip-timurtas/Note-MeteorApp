@@ -1,9 +1,16 @@
 <template name="recentlyAdded">
-	{{#each recents}}
-	<a href="#" class="list-group-item recent-note {{selectedClass}}">{{title}}
-	</a>
-	{{else}}
-		<h4>You don't have any note yet.</h4>
-	{{/each}}
-	
+	<div class="list-group ">
+		<a href="#" class="list-group-item disabled">
+			<strong>Lastest 4 Notes</strong> 
+		</a>
+		{{#each recents}}
+			<a href="#" class="list-group-item recent-note {{selectedClass}}">		{{title}}
+				{{#if shared}}
+					<small class="shared-text">Shared</small>
+				{{/if}}
+			</a>
+		{{else}}
+			<h4>You don't have any note yet.</h4>
+		{{/each}}
+	</div>
 </template>

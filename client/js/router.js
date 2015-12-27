@@ -9,19 +9,10 @@ Router.route("/",{
 	}
 });
 
-
 Router.route("/create-note",{
 	name : "createNote",
 	layoutTemplate : "mainLayout",
 	action : function() {
 		this.render("newNote");
-	}
-});
-
-Router.route("/shares",{
-	name : "shares",
-	layoutTemplate : "mainLayout",
-	action : function() {
-		this.render("shares");
 	}
 });

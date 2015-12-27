@@ -30,17 +30,17 @@ Meteor.methods({
 			throw new Meteor.error("unauthorized","unauthorized");
 		};
 
-
+		var sharedToUser = ShareMails.findOne({mail: sharedTo});
 		var data = {
-			owner_mail: Meteor.user().services.google.email,
 			title : title,
 			content: content,
-			shared_to: sharedTo,
-			entry_date: new Date()
+			owner_id: sharedToUser.userId,
+			owner: sharedTo,
+			entry_date: new Date(),
+			shared: true
 		};
 
-		var sharedId = Shares.insert(data);
+		var noteId = Notes.insert(data);
 	}
 });
-
 
