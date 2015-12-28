@@ -10,7 +10,7 @@ Template.recentlyAdded.helpers({
 	},
 	selectedClass : function() {
       if (Session.get('selected') === this._id) { 
-        return "active"; 
+        	return "active"; 
         };
     }
 });

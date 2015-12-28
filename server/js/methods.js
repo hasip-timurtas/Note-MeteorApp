@@ -11,8 +11,8 @@ Meteor.methods({
 			entry_date: new Date()
 		};
 
-		var postId = Notes.insert(data);
-		return postId;
+		var noteId = Notes.insert(data);
+		return noteId;
 	},
 
 	deleteNote: function(noteId) {
