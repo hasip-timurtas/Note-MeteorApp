@@ -1,18 +1,18 @@
-Router.route("/",{
-	name : "index",
-	layoutTemplate : "mainLayout",
-	waitOn: function() {
-		Meteor.subscribe("getNotes");	
-	},
-	action : function() {
-		this.render("index");
-	}
+Router.configure({
+	layoutTemplate : "mainLayout"
 });
 
-Router.route("/create-note",{
-	name : "createNote",
-	layoutTemplate : "mainLayout",
-	action : function() {
-		this.render("newNote");
-	}
+
+Router.map(function(){
+
+	this.route('index',{
+		path: '/',
+		template: 'index',
+		waitOn: function() {
+				Meteor.subscribe("getNotes");	
+		}
+	});
+
+	this.route('newNote');
+
 });
