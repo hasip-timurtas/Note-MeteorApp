@@ -2,7 +2,7 @@ Router.route("/",{
 	name : "index",
 	layoutTemplate : "mainLayout",
 	waitOn: function() {
-		Meteor.subscribe("getNotes",Meteor.userId());	
+		Meteor.subscribe("getNotes");	
 	},
 	action : function() {
 		this.render("index");

@@ -1,3 +1,3 @@
-Meteor.publish("getNotes",function(ownerId) {
-	return Notes.find({owner_id: ownerId});
+Meteor.publish("getNotes",function() {
+	return Notes.find({owner_id: this.userId});
 });
