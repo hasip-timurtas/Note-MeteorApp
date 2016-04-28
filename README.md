@@ -1,6 +1,6 @@
 # Note-MeteorApp
 A public note application,
-Login with google accoun and keep your notes. 
+Login with google account and keep your notes. 
 Link : http://note.hasiptimurtas.com
 
 ### Packages
