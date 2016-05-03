@@ -1,23 +1,22 @@
 <template name="index">
 {{SetTitle "MHT NOTE : Home Page"}}
 	<div class="row">
-		<div class="col-md-5">	
-			 	{{> searchNote}}	
+		<div class="col-md-8">	
+			 	{{> searchNote}}
+			 	<hr>
+				{{#if selectedNote selected}}
+					<div class="show-note">
+						<input class="form-control note-title" type="text" placeholder="title" value="{{selectedNote.title}}"> 
+						<textarea class="form-control note-content" placeholder="content" rows="15">{{selectedNote.content}}</textarea>
+						<div class="alert alert-info" role="alert"> 
+							Entry Date : <strong>{{formatDate selectedNote.entry_date}}</strong>
+							{{> editNote}}
+						</div>
+					</div>
+				{{/if}}
 		</div>
 		<div class="col-md-4">
 			  	{{> recentlyAdded}}
 		</div>
-	</div>
-	<div class="row">
-		{{#if selectedNote selected}}
-			<div class="col-md-9 show-note">
-				<input class="form-control note-title" type="text" placeholder="title" value="{{selectedNote.title}}"> 
-				<textarea class="form-control note-content" placeholder="content" rows="15">{{selectedNote.content}}</textarea>
-				<div class="alert alert-info" role="alert"> 
-					Entry Date : <strong>{{formatDate selectedNote.entry_date}}</strong>
-					{{> editNote}}
-				</div>
-			</div>
-		{{/if}}
 	</div>
 </template>

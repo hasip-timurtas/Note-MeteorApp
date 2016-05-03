@@ -2,8 +2,8 @@ Template.recentlyAdded.helpers({
 	recents: function() {
 		//return Notes.find({});
 		return Notes.find({},{
-								sort: { entry_date: -1},
-								limit : 4
+								sort: { entry_date: -1}
+								/*,limit : 4*/
 						 	});
 
 
