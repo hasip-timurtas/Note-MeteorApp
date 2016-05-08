@@ -1,7 +1,7 @@
 # Note-MeteorApp
 A public note application,
 Login with google account and keep your notes. 
-Link : http://note.hasiptimurtas.com
+Link : http://oldnote.hasiptimurtas.com
 
 ### Packages
   - iron:router
